@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // Base path for GitHub Pages: https://LRmorais.github.io/swot-auditor-pro-v34.0/
-      base: mode === 'production' ? '/swot-auditor-pro-v34.0/' : '/',
+      // Base path for GitHub Pages: https://LRmorais.github.io/swot-auditor/
+      base: mode === 'production' ? '/swot-auditor/' : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
