@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWOT Auditor Pro V15.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+              display: ['Cinzel', 'serif'],
+            },
+            colors: {
+              gold: {
+                50: '#FBF8EB',
+                100: '#F5ECCD',
+                400: '#D4AF37',
+                500: '#C5A028',
+                600: '#AA8820',
+                900: '#423205',
+              },
+              slate: {
+                850: '#172033',
+                950: '#020617',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #e2e8f0;
+      }
+      .gold-gradient {
+        background: linear-gradient(135deg, #D4AF37 0%, #AA8820 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      /* Robust Print Styles */
+      @media print {
+        /* Hide everything by default */
+        body * {
+          visibility: hidden;
+        }
+        
+        /* Reset body background */
+        body {
+          background-color: white !important;
+          color: black !important;
+          margin: 0;
+          padding: 0;
+          overflow: visible !important;
+        }
+
+        /* Show only the printable content container and its children */
+        .printable-content, .printable-content * {
+          visibility: visible;
+        }
+
+        /* Position the printable content at the top left */
+        .printable-content {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          margin: 0 !important;
+          padding: 2rem !important;
+          border: none !important;
+          box-shadow: none !important;
+          background-color: white !important;
+        }
+
+        /* Formatting tweaks for print */
+        .prose-report {
+          color: black !important;
+          font-size: 11pt;
+        }
+        
+        /* Hide scrollbars during print */
+        ::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Ensure links are readable */
+        a {
+          text-decoration: underline;
+          color: black !important;
+        }
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "html2pdf.js": "https://aistudiocdn.com/html2pdf.js@^0.12.1",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
